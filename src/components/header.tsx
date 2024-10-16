@@ -3,22 +3,19 @@ import search from '../assets/search-ico.svg'
 import profile from '../assets/Profile pic.png'  
 import { Profile } from './profile'
 import style from '../components/header.module.css'
-import { useState } from 'react'
+import { ChangeEvent, useState } from 'react'
 
 export function Header() {
 
     const [isHide, setIsHide] = useState<boolean>(false)
 
-    const handleSearch = () => {
-        if(isHide === false) {
-            setIsHide(!isHide)
-            return
-        }
-        if(isHide === true) {
-            setIsHide(!isHide)
-            return
-        }
+    const handleInput = () => {
+        setIsHide(!isHide)
     }   
+
+    const handleSearch = (e: ChangeEvent<HTMLInputElement>) => {
+        
+    }
 
     return(
         <>
@@ -29,8 +26,8 @@ export function Header() {
                 </div>
                 <nav className={style.navigation}>
                     <ul>
-                        <li><img src={search} onClick={handleSearch}/></li>
-                        <li><input type="text" name="" className={isHide ? style.show : style.input} /></li>
+                        <li><img src={search} onClick={handleInput}/></li>
+                        <li><input type="text" name="" className={isHide ? style.show : style.input} onChange={handleSearch}/></li>
                         <li>Explorar</li>
                         <li>Minhas viagens</li>
                         <li><img src={profile} /></li>
