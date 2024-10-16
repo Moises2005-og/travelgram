@@ -4,20 +4,31 @@ import mapPin from '../assets/MapPin.svg'
 import flight from '../assets/flight.svg'
 import gallery from '../assets/gallery.svg'
 
+type profile = {
+    name: string,
+    content: string,
+    src: string
+}
+
+const profile1: profile = {
+    name: 'Isabela Torres',
+    content: "Amante de viagens, cultura e gastronomia. 🌍✈️ Aqui compartilho as histórias registradas em cada clique, explorando cantinhos fascinantes do nosso planeta a partir da movimentada cidade de São Paulo. 🏙️📸",
+    src: profile
+}
+
 export function Profile() {
     return(
         <>
         <div className={style.container}>
             <div className={style.profile}>
                 <div className={style.profileInfo}>
-                    <img src={profile} />
+                    <img src={profile1.src} />
                     <div className={style.content}>
-                        <h2>Isabela Torres</h2>
-                        <p>Amante de viagens, cultura e gastronomia. 🌍✈️  
-                        Aqui compartilho as histórias registradas em cada clique, explorando cantinhos fascinantes do nosso planeta a partir da movimentada cidade de São Paulo. 🏙️📸</p>
+                        <h2>{profile1.name}</h2>
+                        <p>{profile1.content}</p>
                     </div>
                 </div>
-                <ul>
+                <ul className={style.pins}>
                     <li><img src={mapPin} /> <span>Luanda, Angola</span></li>
                     <li><img src={flight} /> <span>37 paises</span></li>
                     <li><img src={gallery} /> <span>240 fotos</span></li>

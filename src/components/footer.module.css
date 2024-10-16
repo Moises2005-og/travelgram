@@ -17,3 +17,23 @@
     font-weight: 400;
     color: #6C6C6C;
 }
+
+@media (max-width: 600px) {
+
+    .footer {
+        display: block;
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+
+    .copy {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1.8rem;
+    }
+    .termos {
+        display: flex;
+        justify-content: space-between;
+
+    }
+}

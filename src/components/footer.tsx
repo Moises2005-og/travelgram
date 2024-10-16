@@ -4,10 +4,10 @@ export function Footer() {
     return(
         <>
             <footer className={style.footer}>
-                <ul>
+                <ul className={style.copy}>
                     <li>Travelgram &copy;2024</li>
                 </ul>
-                <ul>
+                <ul className={style.termos}>
                     <li>Termos de uso</li>
                     <li>Politica de privacidade</li>
                 </ul>
